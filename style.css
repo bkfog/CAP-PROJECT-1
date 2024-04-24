@@ -337,6 +337,10 @@ body {
     margin-left: 0;
   }
 
+  .technical-container {
+    width: auto;
+  }
+
   /* /////////////////////////////////////////////////////////////////////////// */
 
   /* PROJECTS PROJECTS PROJECTS */
@@ -361,5 +365,10 @@ body {
     /* display: flex;
     align-items: center; */
     width: auto;
+  }
+
+  .contact-container > img {
+    width: 25px;
+    height: 25px;
   }
 }
