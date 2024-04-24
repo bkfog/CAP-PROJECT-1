@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +10,6 @@
 }
 
 html {
-  height: 100%;
   font-size: 16px;
   /* border: 2px solid black; */
 }
@@ -17,64 +20,43 @@ body {
   /* border: 2px solid black; */
 }
 
-.picture-frame {
-  border: 2px solid black;
+/* ////////////////////////////////////////////////////////////////// */
+
+/* HERO   HERO  HERO  HERO*/
+
+.hero-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+  /* border: 2px solid black; */
+}
+
+/* styling for main image */
+.picture-frame > img {
+  /* padding: 2px; */
+  height: 700px;
+  filter: brightness(200%);
+  /* border: 2px solid black; */
 }
 
 .intro {
-  border: 2px solid black;
-  height: 300px;
+  /* border: 2px solid black; */
+  height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-/*
-.container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  width: 100%;
-  grid-row: auto auto auto auto auto auto; 
-  gap: 5px;
-  border: 2px solid black; 
-  height: 100vh;
-   width: 100vw;
-  margin-top: 0;
-}
-
-*/
-
-/* .picture-frame {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  grid-column: 2 / 7;
-} */
-
-.picture-frame > img {
-  /* padding: 2px; */
-  filter: brightness(200%);
-}
-
-/* .hero-intro {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid #424242;
-  grid-column: 7 / 12;
-} */
 
 .intro > h1 {
   font-size: 5rem;
   font-weight: 700;
   color: #343434;
-  /* font-family: "Open Sans", sans-serif; */
-
   padding-bottom: 5px;
+  /* word-spacing: 5px;
+  letter-spacing: 2px; */
 }
 
 .intro > h2 {
@@ -93,13 +75,15 @@ body {
   padding: 20px 100px;
   text-decoration: none;
   margin-top: 10px;
-
-  /* width: 400px;
-  height: 70px; */
   border-radius: 0;
   background-color: #343434;
 }
 
+/* ////////////////////////////////////////////////////////////// */
+
+/* //////////////////////////////////////////////////////////////// */
+
+/* ABOUT ABOUT ABOUT ABOUT */
 #about {
   display: flex;
   flex-direction: column;
@@ -108,8 +92,6 @@ body {
   background-color: #d1d1d1;
   height: 100vh;
   width: 100%;
-  /* margin: auto; */
-  /* padding-top: 50px; */
   width: 100%;
   /* border: 2px solid black; */
 }
@@ -134,6 +116,9 @@ body {
   font-family: "DM Sans", sans-serif;
 }
 
+/* ////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////// */
+
 /* SKILLS SECTION */
 #skills {
   display: flex;
@@ -144,22 +129,22 @@ body {
 
 #skills > h2 {
   margin-bottom: 50px;
-  margin-top: 150px;
+  margin-top: 100px;
   font-weight: 600;
   font-size: 4rem;
-  margin-left: 150px;
+  margin-left: 100px;
 }
 
-.technical {
+.technical-container {
   /* border: #000000 solid 2px; */
-  margin-top: 60px;
-  margin-left: 150px;
+  margin-top: 50px;
+  margin-left: 100px;
 }
 
-.technical > h5 {
+.technical.container > h5 {
   font-size: 2rem;
   font-weight: 500;
-  font-family: ;
+  /* font-family: ; */
 }
 .career-progress,
 .skills-progress {
@@ -177,21 +162,28 @@ body {
 #projects {
   background-color: #343434;
   height: 100vh;
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto auto auto; */
   width: 100%;
 }
 
+.projects-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+
 #projects > h2 {
-  grid-column: 1 / 4;
   text-align: center;
   color: #ffffff;
   font-size: 4rem;
-  margin-top: 100px;
+  padding-top: 100px;
+  margin-bottom: 100px;
+  /* border: solid 2px black; */
 }
 
-#projects > div {
+.projects-container > div {
   /* border: #000000 solid 2px; */
   text-align: center;
   color: #ffffff;
@@ -201,7 +193,7 @@ body {
   justify-content: center;
 }
 
-#projects > div > img {
+.projects-container > div > img {
   height: 200px;
 }
 
@@ -225,7 +217,7 @@ body {
 }
 
 .contact-container {
-  border: #ffffff solid 5px;
+  /* border: #ffffff solid 5px; */
   width: 500px;
   /* margin-top: 50px; */
 }
@@ -259,4 +251,115 @@ body {
 .contact-container > img {
   /* border: #ffffff solid 5px; */
   margin-right: 10px;
+}
+
+/* ///////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////// */
+
+/* MEDIA QUERIES */
+
+@media (min-width: 319px) and (max-width: 991px) {
+  .hero-container {
+    height: auto;
+  }
+
+  .picture-frame {
+    visibility: hidden;
+  }
+
+  .picture-frame > img {
+    display: none;
+  }
+
+  .intro {
+    margin-top: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .intro > h1 {
+    text-align: center;
+  }
+
+  /* ////////////////////////////// */
+
+  /* about */
+
+  #about > img {
+    height: 150px;
+    border-radius: 50%;
+  }
+
+  .about-par {
+    width: auto;
+  }
+
+  .about-par > p {
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: "DM Sans", sans-serif;
+  }
+
+  #about {
+    display: flex;
+    background-color: #d1d1d1;
+    height: auto;
+    /* width: 100%;
+    width: 100%; */
+    /* border: 2px solid black; */
+  }
+
+  #about > h2 {
+    padding: 5px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 3rem;
+  }
+
+  /* //////////////////////////////////////////////////////////////////// */
+
+  /* SKILLS SKILLS SKILLS SKILLS */
+  #skills {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    height: auto;
+    background-color: #ffffff;
+    margin-bottom: 50px;
+  }
+
+  #skills > h2 {
+    font-size: 3rem;
+    margin-left: 0;
+  }
+
+  /* /////////////////////////////////////////////////////////////////////////// */
+
+  /* PROJECTS PROJECTS PROJECTS */
+
+  #projects {
+    height: auto;
+  }
+
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  /* //////////////////////////////////////////////////////////////////////////// */
+
+  #contact {
+    height: auto;
+  }
+
+  .contact-container {
+    /* display: flex;
+    align-items: center; */
+    width: auto;
+  }
 }
